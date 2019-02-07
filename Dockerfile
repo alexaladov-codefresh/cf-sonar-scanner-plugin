@@ -7,3 +7,4 @@ RUN apk add wget unzip openjdk8-jre \
 && rm -rf /sonar-scanner/jre \
 && sed -i 's/use_embedded_jre=true/use_embedded_jre=false/g' /sonar-scanner/bin/sonar-scanner
 ENV PATH="/sonar-scanner/bin:${PATH}"
+RUN apk add nodejs npm
